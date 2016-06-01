@@ -9,8 +9,14 @@
 
 // Write a function called addOne() that returns the input number, plus one. 
 
+var addOne = function(input) {
+	var result = input + 1
+	console.log(result)
+	return result
+}
 
-
+// I had "function" spelt "funciton" and couldn't figure it out this whole
+//morning until I finally asked for help at 9am
 
 console.assert(addOne(1) === 2)
 
@@ -20,6 +26,8 @@ console.assert(addOne(1) === 2)
 
 var doubleNum = function(num) {
 	var newNum = num * 2
+	console.log (newNum)
+	return newNum
 }
 
 console.assert(doubleNum(5) === 10)
@@ -31,6 +39,12 @@ console.assert(doubleNum(5) === 10)
  * Write a function called sum that takes two numbers as
  * inputs and computes the sum of those two numbers.
  */
+
+ var comb = function (number1,number2) {
+ 	var result = number1 + number2
+ 	console.log (result)
+ 	return result
+ }
 
 
 console.assert(sum(8, 11) === 19);
