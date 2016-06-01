@@ -9,11 +9,8 @@
 
 // Write a function called addOne() that returns the input number, plus one. 
 
-var addOne = funciton(input) {
-	var result = input + 1
-	console.log(result)
-	return result
-}
+
+
 
 console.assert(addOne(1) === 2)
 
