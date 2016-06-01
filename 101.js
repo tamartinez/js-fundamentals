@@ -40,7 +40,7 @@ console.assert(doubleNum(5) === 10)
  * inputs and computes the sum of those two numbers.
  */
 
- var comb = function (number1,number2) {
+ var sum = function (number1,number2) {
  	var result = number1 + number2
  	console.log (result)
  	return result
