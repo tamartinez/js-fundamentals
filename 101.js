@@ -44,6 +44,7 @@ console.assert(doubleNum(5) === 10)
  	var result = number1 + number2
  	console.log (result)
  	return result
+
  }
 
 
@@ -57,6 +58,12 @@ console.assert(sum(4, 100) === 104);
 // repeating yourself, use your sum function inside 
 // of your average function.
 
+var average = function (number1,number2) {
+	var result = (number1 + number2) / 2
+	console.log (result)
+	return result
+}
+
 
 console.assert(average(8,12) === 10)
 console.assert(average(100,200) === 150)
@@ -67,6 +74,19 @@ console.assert(average(100,200) === 150)
  * Modify your sum function so that if either of its 
  inputs is not a number, it will return "null."
  */
+
+ var sum = function (number1,number2) {
+
+ 	if (typeof number1  === 'number' && typeof number2 === 'number') {
+ 		var result = number1 + number2
+ 		console.log(result)
+ 		return  result
+ 	} else {
+ 		console.log(null)
+ 		return null
+ 	}
+
+ }
 
 
 console.assert(sum(867, 5309) === 6176);
@@ -79,6 +99,16 @@ console.assert(sum(true, 5) === null);
 // Write a function called isNegative that will tell 
 // whether a number is negative or not. 
 
+var isNegative = function (number) {
+	if (number < 0) {
+		console.log (true)
+		return true
+	} else {
+		console.log (false)
+		return false
+	}
+}
+
 console.assert(isNegative(10) === false)
 console.assert(isNegative(0) === false)
 console.assert(isNegative(-999) === true)
@@ -89,6 +119,24 @@ console.assert(isNegative(-999) === true)
 // To avoid repeating yourself, use your isNegative 
 // function inside your sum funciton ***
 
+
+var sum = function (number1,number2) {
+    // if (typeof number1  !== 'number' && typeof number2 !== 'number') {
+    //     console.log(null)
+    //     return null
+    //     } else 
+    if (number1 < 0 || number2 < 0) {
+                console.log (null)
+                return null
+            } else {
+                var result = number1 + number2
+                console.log (result)
+                return result
+     }
+ }
+
+
+
 console.assert(sum(5,-5) === null)
 
 
@@ -97,6 +145,24 @@ console.assert(sum(5,-5) === null)
 // Write a function that will find the minimum of four 
 // input numbers. You can do it using nested if statements,
 // boolean operators, or both (but not neither). 
+
+
+var minimum = function (num1,num2,num3,num4) {
+    if (num1 < num2 && num1 < num3 && num1 < num4) {
+        console.log(num1);
+        return num1
+    } else if ( num2 < num3 && num2 < num4) {
+        console.log(num2)
+        return num2
+    } else if (num3 < num4) {
+         console.log(num3)
+         return num3
+    } else {
+        console.log(num4)
+        return num4
+    }
+}
+
 
 console.assert(minimum(1,2,4,0) === 0)
 console.assert(minimum(1000,-2,-99,50) === -99)
@@ -109,6 +175,21 @@ console.assert(minimum(1000,-2,99,50) === -2)
 // Using logical operators, write a function that will
 // return true if either input is a string, but not 
 // both or neither. 
+
+
+
+var justOneString = function (i1,i2) {
+   if ((typeof i1 === 'string') && ( typeof i2 === 'string')) {
+   		console.log (false)
+        return false
+    } else if ((typeof i1 === 'string') || ( typeof i2 === 'string')) {
+    	console.log (true)
+        return true
+    } 
+    console.log(false)
+    return false
+}
+
 
 console.assert(justOneString('a',5) === true)
 console.assert(justOneString(6,'dotron') === true)
